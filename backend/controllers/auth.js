@@ -92,6 +92,8 @@ exports.login = async (req, res) => {
   }
 };
 
+
+
 exports.secret = async (req, res) => {
   res.json({ currentUser: req.user });
 };
