@@ -42,29 +42,37 @@ const Login=()=> {
 
     return (
         <div>
-            <Jumbotron title="Login" />
+            <Jumbotron title="Login"/>
 
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-6 offset-md-3">
                         <form onSubmit={handleSubmit}>
-                            <input
-                                type="email"
-                                className="form-control mb-4 p-2"
-                                placeholder="Enter your email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
+                            <div className="form-group">
+                                <label htmlFor="email">Email:</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="email"
+                                    placeholder="Enter your email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </div>
 
-                            <input
-                                type="password"
-                                className="form-control mb-4 p-2"
-                                placeholder="Enter your password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
+                            <div className="form-group">
+                                <label htmlFor="password">Password:</label>
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    id="password"
+                                    placeholder="Enter your password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                            </div>
 
-                            <button className="btn btn-primary" type="submit">
+                            <button type="submit" className="btn btn-primary">
                                 Submit
                             </button>
                         </form>
@@ -72,6 +80,7 @@ const Login=()=> {
                 </div>
             </div>
         </div>
+
     );
 }
 
