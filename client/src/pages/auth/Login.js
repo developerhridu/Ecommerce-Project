@@ -3,7 +3,9 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import Jumbotron from "../../components/cards/Jumbotron";
-import { useAuth } from "../../context/auth";
+// import { useAuth } from "../../context/auth";
+import { useAuth, AuthProvider } from "../../context/auth";
+
 
 const Login=()=> {
     // state
