@@ -7,8 +7,8 @@ import { useAuth } from "../../context/auth";
 
 const Login=()=> {
     // state
-    const [email, setEmail] = useState("faisal@gmail.com");
-    const [password, setPassword] = useState("MArt@msb2020");
+    const [email, setEmail] = useState("hridu.hstu@gmail.com");
+    const [password, setPassword] = useState("123456789");
     // hook
     const [auth, setAuth] = useAuth();
     const navigate = useNavigate();
@@ -22,7 +22,7 @@ const Login=()=> {
                 email,
                 password,
             });
-            console.log(data);
+            // console.log(data);
             if (data?.error) {
                 toast.error(data.error);
             } else {
