@@ -3,9 +3,10 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 // import {RotateLeftOutlined} from "@ant-design/icons";
 import Login from "./pages/auth/Login";
-import Home from "./pages/user/Home";
+import Home from "./pages/Home";
 import Register from "./pages/auth/Register";
-import Shop from "./pages/user/Shop";
+import Shop from "./pages/Shop";
+import CategoriesList from "./pages/CategoriesList";
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/shop" element={<Shop />} />
+                    <Route path="/categories" element={<CategoriesList />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                 </Routes>

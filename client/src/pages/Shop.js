@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Jumbotron from "../../components/cards/Jumbotron";
+import Jumbotron from "../components/cards/Jumbotron";
 import axios from "axios";
-import ProductCard from "../../components/cards/ProductCard";
+import ProductCard from "../components/cards/ProductCard";
 import { Checkbox, Radio } from "antd";
-import { prices } from "../prices";
+import { prices } from "./prices";
 
 const Shop=()=> {
     const [categories, setCategories] = useState([]);
