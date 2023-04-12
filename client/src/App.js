@@ -9,10 +9,13 @@ import Shop from "./pages/Shop";
 import CategoriesList from "./pages/CategoriesList";
 import Cart from "./pages/Carts";
 
+
 const App = () => {
     return (
-        <BrowserRouter>
-            <Toaster position="top-right" />
+
+
+            <BrowserRouter>
+                <Toaster position="top-right" />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/shop" element={<Shop />} />
@@ -23,7 +26,8 @@ const App = () => {
                 </Routes>
 
 
-        </BrowserRouter>
+            </BrowserRouter>
+
     );
 };
 
