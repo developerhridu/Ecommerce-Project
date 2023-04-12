@@ -1,9 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
-// import {RotateLeftOutlined} from "@ant-design/icons";
+import {RotateLeftOutlined} from "@ant-design/icons";
 import Menu from "./components/nav/Menu";
-import AdminRoute from "./components/routes/AdminRoute";
 import PrivateRoute from "./components/routes/PrivateRoute";
 import Cart from "./pages/Cart";
 import CategoriesList from "./pages/CategoriesList";
@@ -17,7 +16,8 @@ import Register from "./pages/auth/Register";
 import Dashboard from "./pages/user/Dashboard";
 import UserOrders from "./pages/user/Orders";
 import UserProfile from "./pages/user/Profile";
-
+import AdminRoute from "./components/routes/AdminRoute";
+import AdminDashboard from "./pages/admin/Dashboard";
 const PageNotFound = () => {
     return (
         <div className="d-flex justify-content-center align-items-center vh-100">
@@ -48,6 +48,10 @@ const App = () => {
                         <Route path="user" element={<Dashboard />} />
                         <Route path="user/profile" element={<UserProfile />} />
                         <Route path="user/orders" element={<UserOrders />} />
+                    </Route>
+                    <Route path="/dashboard" element={<AdminRoute />}>
+                        <Route path="admin" element={<AdminDashboard />} />
+
                     </Route>
 
                     <Route path="*" element={<PageNotFound />} replace />
