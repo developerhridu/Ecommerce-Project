@@ -2,19 +2,21 @@ import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 // import {RotateLeftOutlined} from "@ant-design/icons";
-import Login from "./pages/auth/Login";
-import Home from "./pages/Home";
-import Register from "./pages/auth/Register";
-import Shop from "./pages/Shop";
-import CategoriesList from "./pages/CategoriesList";
-import Cart from "./pages/Carts";
+import Menu from "./components/nav/Menu";
+import AdminRoute from "./components/routes/AdminRoute";
 import PrivateRoute from "./components/routes/PrivateRoute";
-import Dashboard from "./pages/user/Dashboard";
-import UserProfile from "./pages/user/Profile";
-import UserOrders from "./pages/user/Orders";
+import Cart from "./pages/Cart";
+import CategoriesList from "./pages/CategoriesList";
 import CategoryView from "./pages/CategoryView";
-import Search from "./pages/Search";
+import Home from "./pages/Home";
 import ProductView from "./pages/ProductVIew";
+import Search from "./pages/Search";
+import Shop from "./pages/Shop";
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
+import Dashboard from "./pages/user/Dashboard";
+import UserOrders from "./pages/user/Orders";
+import UserProfile from "./pages/user/Profile";
 
 const PageNotFound = () => {
     return (
@@ -30,6 +32,7 @@ const App = () => {
 
 
             <BrowserRouter>
+                <Menu />
                 <Toaster position="top-right" />
                 <Routes>
                     <Route path="/" element={<Home />} />
@@ -46,6 +49,7 @@ const App = () => {
                         <Route path="user/profile" element={<UserProfile />} />
                         <Route path="user/orders" element={<UserOrders />} />
                     </Route>
+
                     <Route path="*" element={<PageNotFound />} replace />
                 </Routes>
 
