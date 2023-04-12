@@ -12,6 +12,17 @@ import PrivateRoute from "./components/routes/PrivateRoute";
 import Dashboard from "./pages/user/Dashboard";
 import UserProfile from "./pages/user/Profile";
 import UserOrders from "./pages/user/Orders";
+import CategoryView from "./pages/CategoryView";
+import Search from "./pages/Search";
+import ProductView from "./pages/ProductVIew";
+
+const PageNotFound = () => {
+    return (
+        <div className="d-flex justify-content-center align-items-center vh-100">
+            404 | Page not found
+        </div>
+    );
+};
 
 
 const App = () => {
@@ -24,6 +35,9 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/shop" element={<Shop />} />
                     <Route path="/categories" element={<CategoriesList />} />
+                    <Route path="/category/:slug" element={<CategoryView />} />
+                    <Route path="/search" element={<Search />} />
+                    <Route path="/product/:slug" element={<ProductView />} />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
@@ -32,6 +46,7 @@ const App = () => {
                         <Route path="user/profile" element={<UserProfile />} />
                         <Route path="user/orders" element={<UserOrders />} />
                     </Route>
+                    <Route path="*" element={<PageNotFound />} replace />
                 </Routes>
 
 
