@@ -21,6 +21,7 @@ import AdminCategory from "./pages/admin/Category";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AdminProduct from "./pages/admin/Product";
 import AdminProducts from "./pages/admin/Products";
+import AdminProductUpdate from "./pages/admin/ProductUpdate";
 const PageNotFound = () => {
     return (
         <div className="d-flex justify-content-center align-items-center vh-100">
@@ -57,6 +58,7 @@ const App = () => {
                         <Route path="admin/category" element={<AdminCategory />} />
                         <Route path="admin/create-product" element={<AdminProduct />} />
                         <Route path="admin/products" element={<AdminProducts />} />
+                        <Route path="admin/product/update/:slug" element={<AdminProductUpdate />}/>
 
                     </Route>
 
