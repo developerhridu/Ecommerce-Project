@@ -8,6 +8,10 @@ import Register from "./pages/auth/Register";
 import Shop from "./pages/Shop";
 import CategoriesList from "./pages/CategoriesList";
 import Cart from "./pages/Carts";
+import PrivateRoute from "./components/routes/PrivateRoute";
+import Dashboard from "./pages/user/Dashboard";
+import UserProfile from "./pages/user/Profile";
+import UserOrders from "./pages/user/Orders";
 
 
 const App = () => {
@@ -23,6 +27,11 @@ const App = () => {
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path="/dashboard" element={<PrivateRoute />}>
+                        <Route path="user" element={<Dashboard />} />
+                        <Route path="user/profile" element={<UserProfile />} />
+                        <Route path="user/orders" element={<UserOrders />} />
+                    </Route>
                 </Routes>
 
 
