@@ -38,7 +38,7 @@ const App = () => {
 
             <BrowserRouter>
                 <Menu />
-                <Toaster position="top-right" />
+                <Toaster position="top-center" />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/shop" element={<Shop />} />

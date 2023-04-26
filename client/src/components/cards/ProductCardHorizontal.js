@@ -41,10 +41,7 @@ const ProductCardHorizontal=({ p, remove = true })=> {
                                 currency: "USD",
                             })}
                         </h5>
-                        <p className="card-text">{`${p?.description?.substring(
-                            0,
-                            50
-                        )}..`}</p>
+                        <p className="card-text">{`${p?.description?.substring(0, 50)}..`}</p>
                     </div>
                 </div>
 

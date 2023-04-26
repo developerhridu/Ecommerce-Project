@@ -67,7 +67,7 @@ const Shop=()=> {
 
     return (
         <>
-            <Jumbotron title="Hello World" subTitle="Welcome to React E-commerce" />
+            <Jumbotron title="Hello" />
 
             {/* <pre>{JSON.stringify({ checked, radio }, null, 4)}</pre> */}
 

@@ -44,7 +44,7 @@ const  ProductCard=({ p })=> {
 
             <div className="d-flex justify-content-between">
                 <button
-                    className="btn btn-primary col card-button"
+                    className="btn btn-primary col card-button me-1"
                     style={{ borderBottomLeftRadius: "5px" }}
                     onClick={() => navigate(`/product/${p.slug}`)}
                 >
